@@ -9,7 +9,7 @@ const startContacts = [
   { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
 ];
 
-const contacts = createReducer(startContacts, {
+const items = createReducer(startContacts, {
   [actions.addContact]: (state, { payload }) => [...state, payload],
   [actions.delContact]: (state, { payload }) =>
     state.filter(({ id }) => id !== payload),
@@ -20,6 +20,6 @@ const filter = createReducer('', {
 });
 
 export default combineReducers({
-  contacts,
+  items,
   filter,
 });
