@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import styles from './ContactsListItem.module.css';
 import propTypes from 'prop-types';
-import contactsActions from 'redux/contacts/contacts-actions';
+import contactsActions from 'redux/contacts-actions';
 
 const ContactListItem = ({ name, number, id }) => {
   const dispatch = useDispatch();
